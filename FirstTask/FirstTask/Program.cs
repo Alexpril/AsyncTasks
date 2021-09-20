@@ -8,32 +8,58 @@ namespace FirstTask
     {
         static async Task Main(string[] args)
         {
-            int ForksCount = 2;
+            int forksCount;
 
-            User User1 = new("Alex1");
-            User User2 = new("Alex2");
-            User User3 = new("Alex3");
-            User User4 = new("Alex4");
-            User User5 = new("Alex5");
+            User user1 = new("Alex1");
+            User user2 = new("Alex2");
+            User user3 = new("Alex3");
+            User user4 = new("Alex4");
+            User user5 = new("Alex5");
 
-            var Users = new List<Task<User>> { User1.UserStart(), User2.UserStart(), User3.UserStart(), User4.UserStart(), User5.UserStart() };
+            Console.Write("\nPress enter to exit");
 
-            while(Users.Count > 0)
+            while (true)
             {
-                Task<User> readyUser = await Task.WhenAny(Users);
-                var User = readyUser.Result;
-                
-                if(ForksCount > 0)
+                Console.Write("\n\nNew round\n\n");
+                forksCount = 2;
+                user1.haveFork = false;
+                user2.haveFork = false;
+                user3.haveFork = false;
+                user4.haveFork = false;
+                user5.haveFork = false;
+
+                List<Task<User>> userTasks = new() { UserStartAsync(user1), UserStartAsync(user2), UserStartAsync(user3), UserStartAsync(user4), UserStartAsync(user5) };
+
+                while (userTasks.Count > 0)
                 {
-                    
-                    Console.WriteLine("Pick Fork User name {0}",User.name);
-                    ForksCount--;
-                } else
-                {
-                    Console.WriteLine("Not enough forks");
+                    Task<User> userTask = await Task.WhenAny(userTasks);
+
+                    if (forksCount > 0)
+                    {
+                        userTask.Result.haveFork = true;
+                        Console.WriteLine("{0} pick a fork", userTask.Result.name);
+                        forksCount--;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not enough forks");
+                    }
+
+                    userTasks.Remove(userTask);
                 }
-                Users.Remove(readyUser);
+
+                if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Enter)
+                {
+                    break;
+                }
             }
+        }
+
+        static async Task<User> UserStartAsync(User user)
+        {
+            Random rand = new();
+            await Task.Delay(rand.Next(1000, 5000));
+            return user;
         }
     }
 }

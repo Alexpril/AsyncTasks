@@ -8,15 +8,16 @@ namespace SecondTask
 {
     class Program
     {
+        private const int numberOfDigits = 10000000;
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Random rand = new();
-            List<int> arr = new();
-            List<int> arr2 = new(); 
-            for (int i = 0; i < 10000000; i++)
+            Random random = new();
+            List<int> inputArray = new();
+            List<int> resultArray = new(); 
+            for (int i = 0; i < numberOfDigits; i++)
             {
-                arr.Add(rand.Next(1, 13));
+                inputArray.Add(random.Next(1, 13));
             }
 
             for (int i = 1; i <= 20; i++)
@@ -24,58 +25,56 @@ namespace SecondTask
                 Stopwatch timePerOne = new();
 
                 timePerOne.Start();
-                arr2 = asyncFactorial(arr, i).Result;
+                resultArray = FactorialAsync(inputArray, i).Result;
                 timePerOne.Stop();
                 Console.Write("\n");
                 var total = timePerOne.ElapsedMilliseconds;
                 Console.Write("\nTime(" + (i) + " thread(s)):\n" + total + "\n");
             }
 
-            Console.Write("\n Max value: " + arr2.Max());
-            Console.Write("\n Avg value: " + arr2.Average());
-            Console.Write("\n Sum value: Too big value!");
-
-            Console.Write("\n");
+            Console.Write("\n Max value: " + resultArray.Max());
+            Console.Write("\n Avg value: " + resultArray.Average());
+            Console.Write("\n Sum value: Too big value!\n");
         }
 
-        public static async Task<List<int>> asyncFactorial(List<int> arr, int threadsCount)
+        public static async Task<List<int>> FactorialAsync(List<int> arr, int threadsCount)
         {
-            List<Task<List<int>>> Tasks = new();
-            List<int> resultArr = new();
+            List<Task<List<int>>> tasks = new();
+            List<int> resultArray = new();
 
             for (int i = 0; i < threadsCount; i++)
             {
-                int Iter1 = arr.Count / threadsCount * i;
-                int Iter2 = arr.Count / threadsCount * (i + 1);
-                Tasks.Add(Task.Run(() => FactorialIter(arr, Iter1, Iter2)));
+                int left = arr.Count / threadsCount * i;
+                int right = arr.Count / threadsCount * (i + 1);
+                tasks.Add(Task.Run(() => FactorialIter(arr, left, right)));
             }
             
-            var Arrays = await Task.WhenAll(Tasks);
+            var resultArrays = await Task.WhenAll(tasks);
 
-            for(int i = 0; i < Arrays.Length; i++)
+            for(int i = 0; i < resultArrays.Length; i++)
             {
-                resultArr.AddRange(Arrays[i]);
+                resultArray.AddRange(resultArrays[i]);
             }
 
-            return resultArr;
+            return resultArray;
         }
 
 
-        public static List<int> FactorialIter(List<int> arr, int Iter1, int Iter2)
+        public static List<int> FactorialIter(List<int> inputArray, int left, int right)
         {
-            List<int> arr2 = new();
-            for (int i = Iter1; i < Iter2; i++)
+            List<int> resultArray = new();
+            for (int i = left; i < right; i++)
             {
-                 arr2.Add(Fact(arr[i]));
+                resultArray.Add(Fact(inputArray[i]));
             }
-            return arr2;
+            return resultArray;
         }
 
-        public static int Fact(int a)
+        public static int Fact(int num)
         {
-            if(a>=2)
+            if(num>=2)
             {
-                return a*Fact(a-1);
+                return num*Fact(num-1);
             }
             return 1;
         }

@@ -12,17 +12,17 @@ namespace ThirdTask
     }
     public class Product
     {
-        public string Name;
-        public Categories Category;
-        public double Price;
-        public int Quantity;
+        public string name { get; set; }
+        public Categories category { get; set; }
+        public double price { get; set; }
+        public int quantity { get; set; }
 
         public Product()
         {
-            Name = Faker.Lorem.Words(1).First();
-            Category = Faker.Enum.Random<Categories>();
-            Price = Faker.RandomNumber.Next(1, 100);
-            Quantity = Faker.RandomNumber.Next(1, 1000);
+            name = Faker.Lorem.Words(1).First();
+            category = Faker.Enum.Random<Categories>();
+            price = Faker.RandomNumber.Next(1, 100);
+            quantity = Faker.RandomNumber.Next(1, 1000);
         }
     }
 }
