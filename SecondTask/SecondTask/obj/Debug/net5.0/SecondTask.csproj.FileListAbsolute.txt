@@ -1,0 +1,16 @@
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\bin\Debug\net5.0\SecondTask.exe
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\bin\Debug\net5.0\SecondTask.deps.json
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\bin\Debug\net5.0\SecondTask.runtimeconfig.json
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\bin\Debug\net5.0\SecondTask.runtimeconfig.dev.json
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\bin\Debug\net5.0\SecondTask.dll
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\bin\Debug\net5.0\ref\SecondTask.dll
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\bin\Debug\net5.0\SecondTask.pdb
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\obj\Debug\net5.0\SecondTask.csproj.AssemblyReference.cache
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\obj\Debug\net5.0\SecondTask.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\obj\Debug\net5.0\SecondTask.AssemblyInfoInputs.cache
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\obj\Debug\net5.0\SecondTask.AssemblyInfo.cs
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\obj\Debug\net5.0\SecondTask.csproj.CoreCompileInputs.cache
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\obj\Debug\net5.0\SecondTask.dll
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\obj\Debug\net5.0\ref\SecondTask.dll
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\obj\Debug\net5.0\SecondTask.pdb
+C:\Users\prylutskyi\source\repos\SecondTask\SecondTask\obj\Debug\net5.0\SecondTask.genruntimeconfig.cache

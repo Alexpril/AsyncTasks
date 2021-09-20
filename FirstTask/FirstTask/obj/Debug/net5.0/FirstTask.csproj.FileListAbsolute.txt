@@ -1,0 +1,16 @@
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\obj\Debug\net5.0\FirstTask.csproj.AssemblyReference.cache
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\obj\Debug\net5.0\FirstTask.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\obj\Debug\net5.0\FirstTask.AssemblyInfoInputs.cache
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\obj\Debug\net5.0\FirstTask.AssemblyInfo.cs
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\obj\Debug\net5.0\FirstTask.csproj.CoreCompileInputs.cache
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\bin\Debug\net5.0\FirstTask.exe
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\bin\Debug\net5.0\FirstTask.deps.json
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\bin\Debug\net5.0\FirstTask.runtimeconfig.json
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\bin\Debug\net5.0\FirstTask.runtimeconfig.dev.json
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\bin\Debug\net5.0\FirstTask.dll
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\bin\Debug\net5.0\ref\FirstTask.dll
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\bin\Debug\net5.0\FirstTask.pdb
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\obj\Debug\net5.0\FirstTask.dll
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\obj\Debug\net5.0\ref\FirstTask.dll
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\obj\Debug\net5.0\FirstTask.pdb
+C:\Users\prylutskyi\source\repos\FirstTask\FirstTask\obj\Debug\net5.0\FirstTask.genruntimeconfig.cache
