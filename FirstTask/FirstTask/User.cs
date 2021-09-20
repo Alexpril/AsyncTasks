@@ -2,12 +2,12 @@
 {
     public class User
     {
-        public string name { get; set; }
-        public bool haveFork { get; set; }
+        public string Name { get; set; }
+        public bool HaveFork { get; set; }
         public User(string name)
         {
-            this.name = name;
-            this.haveFork = false;
+            this.Name = name;
+            this.HaveFork = false;
         }
     }
 }

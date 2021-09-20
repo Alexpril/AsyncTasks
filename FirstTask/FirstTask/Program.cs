@@ -22,11 +22,11 @@ namespace FirstTask
             {
                 Console.Write("\n\nNew round\n\n");
                 forksCount = 2;
-                user1.haveFork = false;
-                user2.haveFork = false;
-                user3.haveFork = false;
-                user4.haveFork = false;
-                user5.haveFork = false;
+                user1.HaveFork = false;
+                user2.HaveFork = false;
+                user3.HaveFork = false;
+                user4.HaveFork = false;
+                user5.HaveFork = false;
 
                 List<Task<User>> userTasks = new() { UserStartAsync(user1), UserStartAsync(user2), UserStartAsync(user3), UserStartAsync(user4), UserStartAsync(user5) };
 
@@ -36,8 +36,8 @@ namespace FirstTask
 
                     if (forksCount > 0)
                     {
-                        userTask.Result.haveFork = true;
-                        Console.WriteLine("{0} pick a fork", userTask.Result.name);
+                        userTask.Result.HaveFork = true;
+                        Console.WriteLine("{0} pick a fork", userTask.Result.Name);
                         forksCount--;
                     }
                     else
